@@ -1,0 +1,16 @@
+{
+  "name": "top3",
+  "version": "1.0.0",
+  "description": "TOP",
+  "main": "top3.test.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^24.0.25",
+    "jest": "^24.9.0"
+  }
+}
