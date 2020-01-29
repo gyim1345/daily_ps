@@ -9,7 +9,7 @@ const compare = (a, b) => {
 
 const solution = (numbers) =>{
   let numbs = [1,6,3,4,5,2,7]
-  console.log(numbs.sort(compare1))
+    console.log(numbs.sort(compare1))
   return numbers.sort(compare1)
  }
 

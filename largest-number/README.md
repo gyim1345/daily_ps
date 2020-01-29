@@ -1,3 +1,5 @@
+<https://github.com/wholemann/coding-dojo-1/blob/largest-number-csh-mgh/largest-number-csh-mgh/largest-number.test.js>
+에서 가져온 풀이 방법
 
 # 가장 큰 수
 
