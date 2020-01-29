@@ -1,7 +1,7 @@
 {
   "name": "maxMinNumber",
   "version": "1.0.0",
-  "description": "",
+  "description": "<https://programmers.co.kr/learn/courses/30/lessons/12939>",
   "main": "index.js",
   "dependencies": {
     "@types/jest": "^24.9.1",
