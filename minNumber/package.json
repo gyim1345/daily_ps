@@ -1,0 +1,16 @@
+{
+  "name": "minNumber",
+  "version": "1.0.0",
+  "description": "https://programmers.co.kr/learn/courses/30/lessons/12941",
+  "main": "minNumber.test.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^25.1.2",
+    "jest": "^25.1.0"
+  }
+}
