@@ -42,45 +42,28 @@ let sortednewFilteredSkillTreeWithOnlyTheSkills = newFilteredSkillTreeWithOnlyTh
       }
 ).join(''))
 
-//https://gist.github.com/ecarter/1423674>
+newFilteredSkillTreeWithOnlyTheSkills = newFilteredSkillTreeWithOnlyTheSkills.filter( (x,i)=> x === sortednewFilteredSkillTreeWithOnlyTheSkills[i] )
+console.log(newFilteredSkillTreeWithOnlyTheSkills)
 
-// function mapOrder (array, order, key) {
-  
-//     array.sort( function (a, b) {
-//       var A = a[key], B = b[key];
-      
-//       if (order.indexOf(A) > order.indexOf(B)) {
-//         return 1;
-//       } else {
-//         return -1;
-//       }
-      
-//     });
-    
-//     return array;
-//   };
+/// skill 의 선행 조건을 만족하는지 확인.
+// 앞뒤 글자를 확인해서 앞에가 없고 뒤에가 있으면 false 로 하고 지운다.
 
+// 글자의 length 만큼 비교 해서 skill tree element 가 2개 있으면 skill의 2개 번째 글 까지 같아야한다.
+newFilteredSkillTreeWithOnlyTheSkills.map( el => el = '')
 
+let count1 =0;
 
-
-
-console.log(newFilteredSkillTreeWithOnlyTheSkills,sortednewFilteredSkillTreeWithOnlyTheSkills)
-console.log(skill)
-// newFiltered
-
-// let newfilteredword = [];
-// while(count<skill.length){
-//     // count = 0;
-//     console.log(filteredSkillTreeWithAtLeastOneSkill = filteredSkillTreeWithAtLeastOneSkill
-//         .filter(wordOfSkillTree => wordOfSkillTree.includes(skill[count])))
-//     count ++;
-// }
-// console.log(newfilteredword)
-
- 
+while(count1 < newFilteredSkillTreeWithOnlyTheSkills.length) {
+  conditionalSkill = skill.slice(0, newFilteredSkillTreeWithOnlyTheSkills[count1].length).join('')
+  console.log(conditionalSkill)
+  console.log(newFilteredSkillTreeWithOnlyTheSkills[count1])
+  if(newFilteredSkillTreeWithOnlyTheSkills[count1] == conditionalSkill)
+  count ++;
+  count1 ++;
+}
 
 
-return 2;
+return count;
 }
 
 const hasAtLeastOneSkill = (skill, skill_trees) =>
@@ -89,37 +72,10 @@ skill_trees.filter(stringofskilltree=> stringofskilltree.split('').some(letterof
 const extractOnlyTheLettersOfArrayFromArrayOfWords = (ArrayOfWords,LettersOfArray) =>
 ArrayOfWords.map(word => word = word.split('').filter(letter => LettersOfArray.includes(letter) ).join('') )
 
-function (a, b) {
-    var A = a[key], B = b[key];
-    
-    if (order.indexOf(A) > order.indexOf(B)) {
-      return 1;
-    } else {
-      return -1;
-    }
-    
-  };
   
 
 test('skillTree', () => {
-    // expect(skillTree('ABC', ['A', 'B'])).toBe(1);
+    expect(skillTree('ABC', ['A', 'B'])).toBe(1);
     expect(skillTree('CBD', ['BACDE', 'CBADF', 'AECB', 'BDA'])).toBe(2);
-    // expect(skillTree('CBD', ['EFG'])).toBe(1);
+    expect(skillTree('CBD', ['EFG'])).toBe(1);
 });
-
-
-
-
-
-// const skillTree = (skill, skill_trees) => 
-// skill_trees
-//   .map(v => v.replace(new RegExp(`[^${skill}]`, 'g'), ''))
-//   .filter(s => skill.startsWith(s)).length;
-
-
-// test('skillTree', () => {
-//     expect(skillTree('ABC', ['A', 'B'])).toBe(1);
-//     expect(skillTree('CBD', ['BACDE', 'CBADF', 'AECB', 'BDA'])).toBe(2);
-//     expect(skillTree('CBD', ['EFG'])).toBe(1);
-// });
-
