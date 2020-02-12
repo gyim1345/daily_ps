@@ -24,7 +24,7 @@ const skillTree = (skill, skill_trees) => {
 let filteredSkillTreeWithAtLeastOneSkill = hasAtLeastOneSkill(skill, skill_trees)
 
 count = count + skill_trees.length - filteredSkillTreeWithAtLeastOneSkill.length
-console.log(count)
+
 // console.log(filteredSkillTreeWithAtLeastOneSkill)
 
 //skill에 해당 되는 letter 만 추출.
