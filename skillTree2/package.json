@@ -1,0 +1,16 @@
+{
+  "name": "skillTree2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^25.1.2",
+    "jest": "^25.1.0"
+  }
+}
