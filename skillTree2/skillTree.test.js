@@ -44,7 +44,7 @@ let regex= new RegExp(`[^${skill}]`, 'gi')
 // [^...]은 ^는 부정 [...]안에 만족하는 모든것. 그래서 `[^${skill}]` 는 skill을 만족하지 않는 모든것
 // /.../ 대신 new RegExp 쓰는 이유는 변수를 넣을려고. ${변수}?
 // 위에 /.../ 안에는 변수가 안들어가는듯.
-console.log(targetStr.replace(regexr, '')); //
+console.log(targetStr.replace(regexr, '')); //``
 console.log(skill_trees)
 console.log(skill_trees.map(e=> e.replace(regex, '')))
 return skill_trees.map(e=> e.replace(regex, '')).filter(e =>skill.startsWith(e)).length
