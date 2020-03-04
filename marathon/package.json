@@ -1,25 +1,16 @@
 {
   "name": "marathon",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "marathon.test.js",
   "scripts": {
     "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gyim1345/practice.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gyim1345/practice/issues"
-  },
-  "homepage": "https://github.com/gyim1345/practice#readme",
   "dependencies": {
-    "@types/jest": "^24.0.23",
-    "jest": "^24.9.0"
-  },
-  "devDependencies": {},
-  "description": ""
+    "@types/jest": "^25.1.3",
+    "jest": "^25.1.0"
+  }
 }
