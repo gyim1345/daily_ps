@@ -1,22 +1,18 @@
-const findPrintOrder = (priorities, location) =>
-  step(priorities.map((v, i) => ({ location: i, priority: v, })), location, 1);
-
-const step = (queue, target, order) =>{
-    console.log(queue, target, order)
-
- return head(queue).priority === Math.max(...queue.map(v => v.priority)) // que 값의 앞의 priority가 que안에 있는 priority 중에서 가장 큰 값이라면
-    ? head(queue).location === target ? order : step(tail(queue), target, order + 1) // que의 첫번째 값의 location 이 (문제에서 주어진 location) target location 이면 return order(count같은것)을 돌려줘라 아니면 step을 다시 돌리되 
-    : step([...tail(queue), head(queue)], target, order); 
-
+const printer = (priorities, location) => {
+    const prioritiesWithIndexLocation = priorities.map((x,i) => x= {priority: x,location: i});
+  
+   return recursiveShit(prioritiesWithIndexLocation,location);
 }
 
-const head = xs => xs.slice(0, 1)[0];
-const tail = xs => xs.slice(1);
+const recursiveShit = (prioritiesWithIndexLocation, location, count=0) =>
+     prioritiesWithIndexLocation[0].priority === Math.max(...prioritiesWithIndexLocation.map((x,i) => x.priority)) 
+      ? prioritiesWithIndexLocation[0].location === location 
+        ? count+1
+        : recursiveShit(prioritiesWithIndexLocation.slice(1),location, count += 1)
+      : recursiveShit([...prioritiesWithIndexLocation.slice(1),...prioritiesWithIndexLocation.slice(0,1)], location, count)
 
-test('findPrintOrder', () => {
-//   expect(findPrintOrder([2, 1], 0)).toBe(1);
-//   expect(findPrintOrder([2, 1], 1)).toBe(2);
-  expect(findPrintOrder([2, 1, 3, 2], 2)).toBe(1);
-//   expect(findPrintOrder([1, 1, 9, 1, 1, 1], 0)).toBe(5);
-//   expect(findPrintOrder([6, 3, 16, 3, 5, 7], 3)).toBe(6);
-});
+
+test( 'printer', () => {
+    expect(printer([2, 1, 3, 2],2)).toBe(1);
+    expect(printer([1, 1, 9, 1, 1, 1],0)).toBe(5)
+})
