@@ -1,3 +1,7 @@
+
+ <https://github.com/wholemann/daily-coding-dojo/blob5bf9dedc1ead2ef5d17eb8dd0a7ed00435569b75/20191222/printer.test.js> 의 문제 풀이를 참고 해서 따라 해보기 / 분해하기.
+
+
 이해: 
 
 priorities : 인쇄 목록의 중요도 혹은 먼저 프린트 해야하는 숫자를 가르친다. 높을 수록 중요도가 높다.
@@ -14,16 +18,8 @@ location: 은 현제 위치를 말한다.
 
 계획.
 
-현제 location을 객체로 만들어서 저장해서 priority에 따라 밑에 있는 작업을 해준다.
-
-중요도가 낮은게 높은것보다 앞에 있으면 제일 앞에 있는 인쇄물을 뒤로 넣는다. 그래서 제일 중요도가 높은 인쇄물이 priorities의 배열의 첫번째에 들어 올때까지 위에 뒤로 보내는 작업을 한다.
-
-오면 이제 그 인쇄물을 뽑는다.
-
-뽑을때 마다  count를 해주고  혹시 location이 내가 원하는 location이랑 같을때 count를 반환해준다.
-
+분해 및 이해하기.
 
 회고:
 
-어제 풀었던 printer 문제를 recursive 로 바꾸긴 했는데 이게 그냥 그대로 while 대신 다시 쓸 수 있게끔 recursive 하게 만든거라 제대로 한게 아닌것 같다.  
-다음에는 <https://github.com/wholemann/daily-coding-dojo/blob/5bf9dedc1ead2ef5d17eb8dd0a7ed00435569b75/20191222/printer.test.js> 에 있는 것을 보고 따라 해보도로고 하겠다.
+위의 링크의 코드 따라 저번에 풀었던 코드를 재귀로 바꿨다.
