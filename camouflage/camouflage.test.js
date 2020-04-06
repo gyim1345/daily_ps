@@ -1,7 +1,7 @@
 const camouflage = (clothes) => {
     const types = findType(clothes);
     const duplicateCounts = countDuplicateTypes(types);
-    const NumberOfCases = duplicateCounts.map(x => x = x + 1).reduce((prev, curr) => prev * curr) - 1
+    const NumberOfCases = duplicateCounts.reduce((prev, curr) => prev * (curr+1),1) - 1
     return NumberOfCases;
 }
 
