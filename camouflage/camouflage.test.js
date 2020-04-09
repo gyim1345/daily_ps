@@ -12,7 +12,7 @@ const countDuplicateTypes = (types) => {
     while (newType.length > 0) {
         returnType.push(newType.filter(x => x === types[i]).length)
         newType = removeDuplicate(newType, types[i])
-        i++;
+        i += 1;
     }
     return returnType;
 }
