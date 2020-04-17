@@ -32,13 +32,6 @@ test('removeDuplicate', () => {
 
 
 
-// test('removeDuplicate', () => {
-//     expect(removeDuplicate(['headgear'], ['headgear','eyewear','headgear'])).toEqual(['eyewear'])
-//     expect(removeDuplicate(['headgear','eyewear','shit'], ['headgear','eyewear','headgear'])).toEqual([])
-
-// })
-
-
 test('countDuplicateTypes', () => {
     expect(countDuplicateTypes(['headgear', 'eyewear', 'headgear'])).toEqual([2, 1])
 })
