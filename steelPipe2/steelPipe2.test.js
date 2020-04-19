@@ -16,7 +16,6 @@ const steelPipe = (arrangement) => {
     return count;
 }
 
-
 test('steelPipe', () => {
     expect(steelPipe('()(((()())(())()))(())')).toBe(17);
 })
