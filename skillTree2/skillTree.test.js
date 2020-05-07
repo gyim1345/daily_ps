@@ -31,11 +31,13 @@ const solution = (skill, skill_trees) =>{
     // .length
 // )
 
-const targetStr = 'abc#123';
+const targetStr = 'abc#@123';
 
 // A-Z a-z 0-9 이외의 문자가 있는지 검사
-let regexr = /[^A-Za-z0-9]/gi;
+// let regexr = /[^A-Za-z0-9]/gi;
 let regex= new RegExp(`[^${skill}]`, 'gi')
+let matchText = 'ab'
+let regex2 = new RegExp(`[${matchText}]`, 'gi')
 ///g 는 컨디션을 만족하는 순간 멈추는데 이것을 계속 이어가게 해줌
 // i 는 대소문자 무시
 // new RegExp(`[^${skill}]`, 'gi') 
@@ -44,9 +46,10 @@ let regex= new RegExp(`[^${skill}]`, 'gi')
 // [^...]은 ^는 부정 [...]안에 만족하는 모든것. 그래서 `[^${skill}]` 는 skill을 만족하지 않는 모든것
 // /.../ 대신 new RegExp 쓰는 이유는 변수를 넣을려고. ${변수}?
 // 위에 /.../ 안에는 변수가 안들어가는듯.
-console.log(targetStr.replace(regexr, '')); //``
-console.log(skill_trees)
-console.log(skill_trees.map(e=> e.replace(regex, '')))
+console.log(targetStr.match(regex2))
+// console.log(targetStr.replace(regexr, '')); //``
+// console.log(skill_trees)
+// console.log(skill_trees.map(e=> e.replace(regex, '')))
 return skill_trees.map(e=> e.replace(regex, '')).filter(e =>skill.startsWith(e)).length
 // startsWith는 그 시작하는 값이 같은지 true/false로 반환해줌
 // 'asdf'.startsWith('asd') 은 true. asdf는 asd로 시작하는게 맞으니.
