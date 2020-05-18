@@ -1,8 +1,6 @@
 const kNumber = (array, commands) => {
     const arrayReturn =[];
-    
     commands.forEach(indexes => arrayReturn.push(array.slice(indexes[0]-1, indexes[1]).sort((a,b)=>a-b)[indexes[2]-1]))
-    
     return arrayReturn;
     }
     

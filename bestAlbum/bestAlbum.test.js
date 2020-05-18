@@ -28,21 +28,28 @@ const bestAlbum = (genres, plays) => {
     
     const genresWithPlays = genres.map((genre,i) => genre = {genre: genre, plays: plays[i], index: i})
 
+
     genresWithPlays.sort((a,b) => {
-        return genreObject[b.genre]- genreObject[a.genre]
-    })
-    genresWithPlays.sort((a,b) => {
+    if(a.genre === b.genre && a.plays === b.plays) {
+            return a.index- b.index
+        }
         if(a.genre === b.genre) {
             return b.plays- a.plays
         }
-        return
+        return genreObject[b.genre]- genreObject[a.genre]
     })
-    genresWithPlays.sort((a,b) => {
-        if(a.genre === b.genre && a.plays === b.plays) {
-            return a.index- b.index
-        }
-        return
-    })
+    // genresWithPlays.sort((a,b) => {
+    //     if(a.genre === b.genre) {
+    //         return b.plays- a.plays
+    //     }
+    //     return
+    // })
+    // genresWithPlays.sort((a,b) => {
+    //     if(a.genre === b.genre && a.plays === b.plays) {
+    //         return a.index- b.index
+    //     }
+    //     return
+    // })
     
     const genreCounts = {};
     const slicedGenres =[];
