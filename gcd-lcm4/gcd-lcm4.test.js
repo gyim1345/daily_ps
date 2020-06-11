@@ -3,11 +3,13 @@ const solution = (n, m) => {
  }
 
 const gcd = (n,m) => {
-    return Math.max(...commonDivisor(n).filter(x => x = commonDivisor(m).includes(x)))
+    return Math.max(...commonDivisor(n)
+               .filter(x => commonDivisor(m).includes(x)))
 }
 
 const commonDivisor = (n) => {
-    return Array(n).fill().map( (_,i) => n = i+1).filter(x => n % x === 0)
+    return Array(n).fill()
+                   .map( (_,i) => n = i+1).filter(x => n % x === 0)
 }
 
 

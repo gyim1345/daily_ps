@@ -29,6 +29,6 @@ const getGcm2 = (n, m) => {
 }
 
 test('getGcm', () => {
-    [getGcm1, getGcm2].forEach(getGcm =>
-        expect(getGcm(192, 72)).toEqual([24, 576]));
+    // [getGcm1, getGcm2].forEach(getGcm =>
+        expect(getGcm2(192, 72)).toEqual([24, 576]);
 })
