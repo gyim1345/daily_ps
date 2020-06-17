@@ -6,7 +6,10 @@ import java.util.stream.Collectors;
 public class spicy {
     public int solution(int[] scoville, int K) {
 
-        PriorityQueue<Integer> queue = new PriorityQueue<Integer>(Arrays.stream(scoville).boxed().collect(Collectors.toList()));
+        PriorityQueue<Integer> queue = new PriorityQueue<Integer>(Arrays.stream(scoville)
+                .boxed()
+                .collect(Collectors
+                        .toList()));
         int count = 0;
         while (queue.peek() != null) {
             int least = queue.poll();
