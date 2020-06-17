@@ -1,0 +1,15 @@
+{
+  "name": "strangeWorld124",
+  "version": "1.0.0",
+  "description": "## 이해 124 나라에서는 10진법이 아닌 자신들만의 규칙으로 수를 표현 124 나라는 자연수만 존재한다.   모든 수를 표현할 때 1,2,4만 사용한다.",
+  "main": "worldOf124.test.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^26.0.1"
+  }
+}
