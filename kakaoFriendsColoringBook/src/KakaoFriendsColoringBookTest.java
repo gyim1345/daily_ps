@@ -1,6 +1,8 @@
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.assertThat;
 
 public class KakaoFriendsColoringBookTest {
@@ -18,7 +20,14 @@ public class KakaoFriendsColoringBookTest {
     public void dfsTest() {
         KakaoFriendsColoringBook kakaoFriendsColoringBook = new KakaoFriendsColoringBook();
         int[][] picture = {{1, 1, 1, 0}, {1, 2, 2, 0}, {1, 0, 0, 1}, {0, 0, 0, 1}, {0, 0, 0, 3}, {0, 0, 0, 3}};
-//        assertThat(kakaoFriendsColoringBook.solution(6,4,picture)).isEqualTo(new int[] {4, 5});
-        Assert.assertEquals(KakaoFriendsColoringBook.dfs(picture, 11, 0 ,1 ),10);
+        Assert.assertEquals(Arrays.deepToString(KakaoFriendsColoringBook.dfs(picture, 1, 0 ,0)), Arrays.deepToString(new int [][] {{0, 0, 0, 0}, {0, 2, 2, 0}, {0, 0, 0, 1}, {0, 0, 0, 1}, {0, 0, 0, 3}, {0, 0, 0, 3}}));
     }
+
+    @Test
+    public void getLengthTest() {
+        KakaoFriendsColoringBook kakaoFriendsColoringBook = new KakaoFriendsColoringBook();
+        int[][] picture = {{1, 1, 1, 0}, {1, 2, 2, 0}, {1, 0, 0, 1}, {0, 0, 0, 1}, {0, 0, 0, 3}, {0, 0, 0, 3}};
+        Assert.assertEquals(KakaoFriendsColoringBook.getLength(picture), 11);
+    }
+
 }

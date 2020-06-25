@@ -28,7 +28,7 @@ public class KakaoFriendsColoringBook {
         return new int[] { a.size(), Collections.max(a)};
     }
 
-    private int getLength(int[][] picture) {
+    public static int getLength(int[][] picture) {
         return Stream.of(picture).flatMapToInt(array-> Arrays.stream(array)).filter(x-> x != 0).toArray().length;
     }
 
