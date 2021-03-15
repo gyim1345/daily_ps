@@ -12,25 +12,6 @@ const solution = (a,b,c) => {
 
 }
 
-function firstFunction(num) {
-  return num;
-}
-
-function secondFunction(num) {
-  return new Promise(resolve => {
-    resolve(num);
-  });
-}
-
-async function thirdFunction (num) {
-  return num;
-}
-
-async function fourthFunction (num) {
-  return await num;
-}
-
-
 test('solution', () => {
   return solution(10,20,30).then(result => {
     expect(result).toBe(10 + 20 + 30);
